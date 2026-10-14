@@ -12,28 +12,13 @@ Elegí una lista de tareas pendientes que permite organizar actividades y llevar
 
 **Qué cambió en el comportamiento:** La página muestra tres tareas de ejemplo, pero todavía no permite interactuar con ellas.
 
-```js
-const listaTareas = document.querySelector("#listaTareas");
-
-const tarea1 = document.createElement("li");
-tarea1.textContent = "Estudiar JavaScript";
-tarea1.classList.add("tarea");
-listaTareas.appendChild(tarea1);
-
-const tarea2 = document.createElement("li");
-tarea2.textContent = "Completar el laboratorio";
-tarea2.classList.add("tarea");
-listaTareas.appendChild(tarea2);
-
-const tarea3 = document.createElement("li");
-tarea3.textContent = "Subir el proyecto a GitHub";
-tarea3.classList.add("tarea");
-listaTareas.appendChild(tarea3);
-```
-
 ## Version 2: con eventos
 
-_Pendiente de desarrollar._
+En esta versión agregué un formulario para ingresar tareas, botones para completarlas y eliminarlas, y mensajes para informar al usuario sobre el resultado de sus acciones.
+
+Utilicé los eventos `submit`, `input` y `click`. También agregué una validación para impedir que se registren tareas vacías y utilicé `preventDefault()` para evitar que la página se recargue al enviar el formulario.
+
+El comportamiento cambió porque ahora el usuario puede interactuar con la lista. Sin embargo, todavía no se utiliza una clase propia para representar las tareas.
 
 ## Version 3: con clases y objetos
 
